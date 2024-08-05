@@ -33,15 +33,51 @@ public class Dog : Animal
 
     public void CastrateAnimal()
     {
-        Console.WriteLine("Ingrese el id del perro a castar: ");
-        int dog = Convert.ToInt32(Console.ReadLine());
-        //validar si el dog ya ha sido castrado
+        Console.WriteLine("ingresa el Nombre del perro a castrar");
+        var dog = Console.ReadLine();
+
+        var dogToCastrate = VeterinaryClinic.Dogs.FirstOrDefault(c => c.Name == dog);
+
+        if (dogToCastrate != null) 
+        {
+            if (dogToCastrate.BreedingStatus == true)
+            {
+                Console.WriteLine("El perro puede será castrado");
+            }
+            else
+            {
+                Console.WriteLine("El perro no puede ser castrado");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Perro no encontrado");
+        }
 
     }
 
     public void Hairdress()
     {
-        
+        Console.WriteLine("ingresa el Nombre del perro a motilar");
+        var dog = Console.ReadLine();
+
+        var dogToHairdress = VeterinaryClinic.Cats.FirstOrDefault(c => c.Name == dog);
+
+        if (dogToHairdress != null) 
+        {
+            if (dogToHairdress.FurLength == "Pelo corto")
+            {
+                Console.WriteLine("El perro no puede ser motilado");
+            }
+            else
+            {
+                Console.WriteLine("El perro será motilado");
+            }
+        }
+        else
+        {
+            Console.WriteLine("perro no encontrado");
+        }
     }
 
     public override void ShowInformation()

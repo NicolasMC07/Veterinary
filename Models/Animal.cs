@@ -67,12 +67,13 @@ public abstract class Animal
 
     protected void BasicReview()
     {
-
+        
     }
 
     protected void CalculateAgeInMonths()
-    {
-        
+    {   
+        var birthdate = DateTime.Now.Month - Birthdate.Month;
+        Console.WriteLine(birthdate);
     }
 
 }
