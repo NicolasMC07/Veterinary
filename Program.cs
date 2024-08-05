@@ -30,7 +30,7 @@ Selecciona una opcion --> ");
         switch (op)
         {
             case "1":
-                ShowDogs();
+                VeterinaryClinic.
                 break;
             case "2":
                 
@@ -55,17 +55,17 @@ Selecciona una opcion --> ");
     } while (op != "8");
 }
 
-void ShowDogs()
-{   
-    Console.Clear();
-    ManagerApp.ShowHeader();
-    ManagerApp.ShowSeparator();
-    foreach (var dog in VeterinaryClinic.Dogs)
-    {
-        dog.ShowInformation();
-    }
-    ManagerApp.ShowFooter();
-}
+// void ShowDogs()
+// {   
+//     Console.Clear();
+//     ManagerApp.ShowHeader();
+//     ManagerApp.ShowSeparator();
+//     foreach (var dog in VeterinaryClinic.Dogs)
+//     {
+//         dog.ShowInformation();
+//     }
+//     ManagerApp.ShowFooter();
+// }
 
 // void ShowCats()
 // {
@@ -78,5 +78,11 @@ void ShowDogs()
 //     }
 //     ManagerApp.ShowFooter();
 // }
+
+void CreateCat()
+{
+    ManagerApp.CreateCat();
+    
+}
 
 ShowMenu();

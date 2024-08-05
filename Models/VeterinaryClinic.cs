@@ -158,9 +158,34 @@ public class VeterinaryClinic
         }
     }
 
-    public void ShowPatients(string name)
+    public void ShowPatient(string name)
     {
-        
+        var patientInDogs = Dogs.FirstOrDefault(d => d.Name == name);
+        var patientInCats = Cats.FirstOrDefault(c => c.Name == name);
+        if (patientInDogs != null)
+        {   
+            ManagerApp.ShowHeader();
+            ManagerApp.ShowSeparator();
+            foreach (var d in Dogs)
+            {   
+                d.ShowInformation();
+            }
+            ManagerApp.ShowFooter();
+        }
+        else if (patientInCats != null)
+        {
+            ManagerApp.ShowHeader();
+            ManagerApp.ShowSeparator();
+            foreach (var c in Cats)
+            {   
+                c.ShowInformation();
+            }
+            ManagerApp.ShowFooter();
+        }
+        else
+        {
+            Console.WriteLine("Paciente no encontrado...");
+        }
     }
 
 }

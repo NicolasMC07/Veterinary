@@ -67,7 +67,7 @@ public abstract class Animal
 
     protected void BasicReview()
     {
-        
+        Console.WriteLine($"{Name} {breed} {WeightInKg}");
     }
 
     protected void CalculateAgeInMonths()
