@@ -5,6 +5,8 @@ VeterinaryClinic.SaveCat(new Cat(2, "kira", new DateOnly(2018, 04, 12), "Persa",
 // se instancian Gatos
 VeterinaryClinic.SaveDog(new Dog(1, "Luna", new DateOnly(2018, 05, 13), "Pug", "Gris", 10.0, true, "Timido", "A1", "Medio", "Pelo corto"));
 
+
+
 void ShowMenu()
 {   
     Console.Clear();
@@ -15,13 +17,13 @@ void ShowMenu()
     $@"###########################################
 #         Veterinary Center               #
 ###########################################
-1. Listar todos los clientes registrados 
-2. Listar todos los conductores registrados
-3. Filtrar libro por Genero
-4. Filtrar libro por Autor
-5. Filtrar libro por rango de fecha especifico
-6. Añadir nuevo libro
-7. Eliminar un libro
+1. Agregar un animal
+2. actualizar un animal
+3. eliminar un animal
+4. 
+5. 
+6. 
+7. 
 8. Salir
 -----------------------------------------------------------------------------------------------
 Selecciona una opcion --> ");
@@ -30,12 +32,13 @@ Selecciona una opcion --> ");
         switch (op)
         {
             case "1":
-                VeterinaryClinic.
+                AddAnimal();
                 break;
             case "2":
-                
+                UpdateAnimal();
                 break;
             case "3":
+                
                 break;
             case "4":
                 break;
@@ -79,10 +82,65 @@ Selecciona una opcion --> ");
 //     ManagerApp.ShowFooter();
 // }
 
-void CreateCat()
+ShowMenu();
+
+void AddAnimal()
 {
-    ManagerApp.CreateCat();
-    
+    Console.WriteLine("Escribe que quieres agregar (Perro/Gato): ");
+    var animal = Console.ReadLine().ToUpper();
+    if (animal == "PERRO")
+    {
+        var newDog = ManagerApp.CreateDog();
+        VeterinaryClinic.SaveDog(newDog);
+    }
+    else if (animal == "GATO")
+    {   
+        var newCat = ManagerApp.CreateCat();
+        VeterinaryClinic.SaveCat(newCat);
+        
+    }
+    else
+    {
+        Console.WriteLine("TIPO DE ANIMAL NO ENCONTRADO");
+    }
 }
 
-ShowMenu();
+void UpdateAnimal()
+{
+    Console.WriteLine("Escribe que quieres Actualizar (Perro/Gato): ");
+    var animal = Console.ReadLine().ToUpper();
+    if (animal == "PERRO")
+    {   
+        Console.WriteLine("Ingrese el nombre del perro a actualizar");
+        var dog = Console.ReadLine();
+        var dogToUpdate = VeterinaryClinic.Dogs.FirstOrDefault(d => d.Name == dog);
+        if (dogToUpdate != null)
+        {
+            VeterinaryClinic.UpdateDog(dogToUpdate);
+            Console.WriteLine("Perro actualizado correctamente");
+        }
+        else
+        {
+            Console.WriteLine("PERRO no encontrado");
+        }
+    }
+    else if (animal == "GATO")
+    {
+        Console.WriteLine("Ingrese el nombre del gato a actualizar");
+        var cat = Console.ReadLine();
+        var catToUpdate = VeterinaryClinic.Cats.FirstOrDefault(d => d.Name == cat);
+        if (catToUpdate != null)
+        {
+            VeterinaryClinic.UpdateCat(catToUpdate);
+            Console.WriteLine("gato actualizado correctamente");
+        }
+        else
+        {
+            Console.WriteLine("GATO no encontrado");
+        }
+    }
+    else
+    {
+        Console.WriteLine("TIPO DE ANIMAL NO ENCONTRADO");
+    }
+}

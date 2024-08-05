@@ -16,11 +16,9 @@ public class VeterinaryClinic
 
     public static List<Cat>? Cats { get; set; } = new List<Cat>();
 
-    // primer COnstructor de la clase VeterinaryClinic
+    // primer Constructor de la clase VeterinaryClinic
     public VeterinaryClinic()
     {
-        List<Dog> Dogs = new List<Dog>();
-        List<Cat> Cats = new List<Cat>();
     }
 
     // segundo constructor de la clase VeterinaryClinic
@@ -42,7 +40,7 @@ public class VeterinaryClinic
         VeterinaryClinic.Cats.Add(newCat);
     }
 
-    public void UpdateDog(Dog dog)
+    public static void UpdateDog(Dog dog)
     {
         var dogToUpdate = VeterinaryClinic.Dogs.FirstOrDefault(d => d.Equals(dog));
 
@@ -75,7 +73,7 @@ public class VeterinaryClinic
         }
     }
 
-    public void UpdateCat(Cat cat)
+    public static void UpdateCat(Cat cat)
     {
         var catToUpdate = VeterinaryClinic.Cats.FirstOrDefault(c => c.Equals(cat));
 
@@ -102,7 +100,7 @@ public class VeterinaryClinic
         }
     }
 
-    public void DeleteDog(int id)
+    public static void DeleteDog(int id)
     {
         Console.WriteLine("Ingresa el id del perro a eliminar");
         var dog = Console.ReadLine();
@@ -110,7 +108,7 @@ public class VeterinaryClinic
         Dogs.Remove(dogToDelete);
     }
 
-    public void DeleteCat(int id)
+    public static void DeleteCat(int id)
     {
         Console.WriteLine("Ingresa el id del gato a eliminar");
         var cat = Console.ReadLine();
@@ -118,7 +116,7 @@ public class VeterinaryClinic
         Cats.Remove(catToDelete);
     }
 
-    public void ShowAllPatients()
+    public static void ShowAllPatients()
     {
         ManagerApp.ShowHeader();
         ManagerApp.ShowSeparator();
@@ -134,7 +132,7 @@ public class VeterinaryClinic
         ManagerApp.ShowFooter();
     }
 
-    public void ShowAnimals(string type)
+    public static void ShowAnimals(string type)
     {
         if (type == "Gato")
         {
@@ -158,7 +156,7 @@ public class VeterinaryClinic
         }
     }
 
-    public void ShowPatient(string name)
+    public static void ShowPatient(string name)
     {
         var patientInDogs = Dogs.FirstOrDefault(d => d.Name == name);
         var patientInCats = Cats.FirstOrDefault(c => c.Name == name);
