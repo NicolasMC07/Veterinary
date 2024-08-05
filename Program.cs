@@ -38,13 +38,19 @@ Selecciona una opcion --> ");
                 UpdateAnimal();
                 break;
             case "3":
-                
+                DeleteAnimal();
                 break;
             case "4":
+                VeterinaryClinic.ShowAllPatients();
                 break;
             case "5":
+
                 break;
             case "6":
+
+                break;
+            case "7":
+            
                 break;
             case "8":
                 Console.WriteLine("Saliendo del programa...");
@@ -128,7 +134,7 @@ void UpdateAnimal()
     {
         Console.WriteLine("Ingrese el nombre del gato a actualizar");
         var cat = Console.ReadLine();
-        var catToUpdate = VeterinaryClinic.Cats.FirstOrDefault(d => d.Name == cat);
+        var catToUpdate = VeterinaryClinic.Cats.FirstOrDefault(c => c.Name == cat);
         if (catToUpdate != null)
         {
             VeterinaryClinic.UpdateCat(catToUpdate);
@@ -143,4 +149,51 @@ void UpdateAnimal()
     {
         Console.WriteLine("TIPO DE ANIMAL NO ENCONTRADO");
     }
+}
+
+void DeleteAnimal()
+{
+    Console.WriteLine("Escribe que quieres Eliminar (Perro/Gato): ");
+    var animal = Console.ReadLine().ToUpper();
+    if (animal == "PERRO")
+    {   
+        Console.WriteLine("Ingrese el id del perro a eliminar");
+        int dog = Convert.ToInt32(Console.ReadLine());
+        var dogToDelete = VeterinaryClinic.Dogs.FirstOrDefault(d => d.Id == dog);
+        if (dogToDelete != null)
+        {
+            VeterinaryClinic.DeleteDog(dog);
+            Console.WriteLine("Perro eliminado correctamente");
+        }
+        else
+        {
+            Console.WriteLine("PERRO no encontrado");
+        }
+    }
+    else if (animal == "GATO")
+    {
+        Console.WriteLine("Ingrese el nombre del gato a eliminar");
+        int cat = Convert.ToInt32(Console.ReadLine());
+        var catToDelete = VeterinaryClinic.Cats.FirstOrDefault(c => c.Id == cat);
+        if (catToDelete != null)
+        {
+            VeterinaryClinic.DeleteCat(cat);
+            Console.WriteLine("gato eliminado correctamente");
+        }
+        else
+        {
+            Console.WriteLine("GATO no encontrado");
+        }
+    }
+    else
+    {
+        Console.WriteLine("TIPO DE ANIMAL NO ENCONTRADO");
+    }
+}
+
+void ShowAnimalsInMenu()
+{
+    Console.WriteLine("Escribe que quieres Eliminar (Perro/Gato): ");
+    var animal = Console.ReadLine().ToUpper();
+    VeterinaryClinic.ShowAnimals(animal);
 }

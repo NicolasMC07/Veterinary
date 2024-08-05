@@ -134,7 +134,7 @@ public class VeterinaryClinic
 
     public static void ShowAnimals(string type)
     {
-        if (type == "Gato")
+        if (type == "GATO")
         {
             ManagerApp.ShowHeader();
             ManagerApp.ShowSeparator();
@@ -144,7 +144,7 @@ public class VeterinaryClinic
             }
             ManagerApp.ShowFooter();
         }
-        else if (type == "Perro")
+        else if (type == "PERRO")
         {
             ManagerApp.ShowHeader();
             ManagerApp.ShowSeparator();
