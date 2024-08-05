@@ -12,9 +12,9 @@ public class VeterinaryClinic
 
     public string? Address { get; set; }
 
-    public List<Dog>? Dogs { get; set; }
+    public static List<Dog>? Dogs { get; set; }
 
-    public List<Cat>? Cats { get; set; } 
+    public static List<Cat>? Cats { get; set; } 
 
     // primer COnstructor de la clase VeterinaryClinic
     public VeterinaryClinic()
@@ -32,14 +32,14 @@ public class VeterinaryClinic
 
     //metodos de la clase VeterinaryClinic
 
-    public void SaveDog(Dog newDog)
+    public static void SaveDog(Dog newDog)
     {
-
+        VeterinaryClinic.Dogs.Add(newDog);
     }
 
-    public void SaveCat(Cat newCat)
+    public static void SaveCat(Cat newCat)
     {
-        
+        VeterinaryClinic.Cats.Add(newCat);
     }
 
     public void UpdateDog(Dog dog)

@@ -32,7 +32,10 @@ public class Cat : Animal
     }
 
     public override void ShowInformation()
-    {
-        throw new NotImplementedException();
+    {   
+        foreach (var cat in VeterinaryClinic.Cats)
+        {
+            Console.WriteLine($"{Name} | {Birthdate,-14} | {Color,-15} | {WeightInKg, -16}");
+        }
     }
 }

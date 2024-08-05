@@ -20,12 +20,20 @@ public static class ManagerApp
 
     public static void ShowHeader()
     {
-
+        Console.WriteLine(@$"###########################################
+#                Animales                 #
+###########################################
+Nombre    | Nacimiento | Color | Peso Kg ");
     }
 
     public static void ShowFooter()
     {
+        Console.WriteLine(@$"###########################################");
+    }
 
+    public static void ShowSeparator()
+    {
+        Console.WriteLine(@$"-------------------------------------------");
     }
 
 }

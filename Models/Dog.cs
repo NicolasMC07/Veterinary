@@ -32,6 +32,11 @@ public class Dog : Animal
 
     public void CastrateAnimal()
     {
+        Console.WriteLine("Ingrese el id del perro a castar: ");
+        int dog = Convert.ToInt32(Console.ReadLine());
+        //validar si el dog ya ha sido castrado
+        
+
 
     }
 
@@ -41,7 +46,10 @@ public class Dog : Animal
     }
 
     public override void ShowInformation()
-    {
-        throw new NotImplementedException();
+    {   
+        foreach (var dog in VeterinaryClinic.Dogs)
+        {
+            Console.WriteLine($"{Name} | {Birthdate,-14} | {Color,-15} | {WeightInKg, -16}");
+        }
     }
 }
