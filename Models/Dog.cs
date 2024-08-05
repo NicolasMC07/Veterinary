@@ -36,8 +36,6 @@ public class Dog : Animal
         Console.WriteLine("Ingrese el id del perro a castar: ");
         int dog = Convert.ToInt32(Console.ReadLine());
         //validar si el dog ya ha sido castrado
-        
-
 
     }
 

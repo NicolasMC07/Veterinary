@@ -6,19 +6,48 @@ using System.Threading.Tasks;
 namespace PruebaC_sharp_NicolasMartinezCardona.Models;
 
 public abstract class Animal
-{   
+{
     // propiedades de la clase Animal
-    protected int Id { get; set; } 
+    protected int id;
+    public int Id
+    {
+        get { return id; }
+        set { id = value; }
+    }
 
-    protected string Name { get; set; }
+    protected string name;
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+    protected DateOnly birthdate;
+    public DateOnly Birthdate
+    {
+        get { return birthdate; }
+        set { birthdate = value; }
+    }
 
-    protected DateOnly Birthdate { get; set; } 
+    protected string breed;
+    public string Breed
+    {
+        get { return breed; }
+        set { breed = value; }
+    }
 
-    protected string Breed { get; set; }
+    protected string color;
+    public string Color
+    {
+        get { return color; }
+        set { color = value; }
+    }
 
-    protected string Color { get; set; }
-
-    protected double WeightInKg { get; set; }
+    protected double weightInKg;
+    public double WeightInKg
+    {
+        get { return weightInKg; }
+        set { weightInKg = value; }
+    }
 
     // Constructor de la clase Animal
 

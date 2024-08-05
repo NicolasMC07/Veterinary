@@ -38,4 +38,5 @@ public class Cat : Animal
             Console.WriteLine($"{Name} | {Birthdate,-14} | {Color,-15} | {WeightInKg, -16}");
         }
     }
+    
 }
