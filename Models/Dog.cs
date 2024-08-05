@@ -20,7 +20,8 @@ public class Dog : Animal
 
     //constructor de la clase Dog
     public Dog(int id, string name, DateOnly birthdate, string breed, string color, double weightInKg, bool breedingStatus, string temperament, string microchipNumber, string barkVolume, string coatType) : base ( id,  name,  birthdate,  breed,  color,  weightInKg)
-    {
+    {   
+        Id = id;
         BreedingStatus = breedingStatus;
         Temperament = temperament;
         MicrochipNumber = microchipNumber;
@@ -47,9 +48,6 @@ public class Dog : Animal
 
     public override void ShowInformation()
     {   
-        foreach (var dog in VeterinaryClinic.Dogs)
-        {
-            Console.WriteLine($"{Name} | {Birthdate,-14} | {Color,-15} | {WeightInKg, -16}");
-        }
+        Console.WriteLine($"{Name} | {Birthdate,-14} | {Color,-15} | {WeightInKg, -16}Kg");
     }
 }
