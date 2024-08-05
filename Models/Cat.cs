@@ -30,4 +30,9 @@ public class Cat : Animal
     {
         
     }
+
+    public override void ShowInformation()
+    {
+        throw new NotImplementedException();
+    }
 }

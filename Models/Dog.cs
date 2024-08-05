@@ -39,4 +39,9 @@ public class Dog : Animal
     {
         
     }
+
+    public override void ShowInformation()
+    {
+        throw new NotImplementedException();
+    }
 }

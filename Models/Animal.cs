@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PruebaC_sharp_NicolasMartinezCardona.Models;
 
-public class Animal
+public abstract class Animal
 {   
     // propiedades de la clase Animal
     protected int Id { get; set; } 
@@ -34,10 +34,7 @@ public class Animal
 
     //metodos de la clase Animal
 
-    public void ShowInformation()
-    {
-
-    }
+    public abstract void ShowInformation();
 
     protected void BasicReview()
     {

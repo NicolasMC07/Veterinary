@@ -8,13 +8,13 @@ namespace PruebaC_sharp_NicolasMartinezCardona.Models;
 public class VeterinaryClinic
 {   
     // propiedades de la clase VeterinaryClinic
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
-    public string Address { get; set; }
+    public string? Address { get; set; }
 
-    public List<Dog> Dogs { get; set; }
+    public List<Dog>? Dogs { get; set; }
 
-    public List<Cat> Cats { get; set; } 
+    public List<Cat>? Cats { get; set; } 
 
     // primer COnstructor de la clase VeterinaryClinic
     public VeterinaryClinic()
