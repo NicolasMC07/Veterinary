@@ -7,6 +7,7 @@ namespace PruebaC_sharp_NicolasMartinezCardona.Models;
 
 public class Dog : Animal
 {
+    // peopiedades de la clase Dog
     public bool BreedingStatus { get; set; }
 
     public string Temperament { get; set; }
@@ -17,6 +18,7 @@ public class Dog : Animal
     
     public string CoatType { get; set; }
 
+    //constructor de la clase Dog
     public Dog(int id, string name, DateOnly birthdate, string breed, string color, double weightInKg, bool breedingStatus, string temperament, string microchipNumber, string barkVolume, string coatType) : base ( id,  name,  birthdate,  breed,  color,  weightInKg)
     {
         BreedingStatus = breedingStatus;
@@ -25,6 +27,8 @@ public class Dog : Animal
         BarkVolume = barkVolume;
         CoatType = coatType;
     }
+
+    //metodos de la clase Dog
 
     public void CastrateAnimal()
     {

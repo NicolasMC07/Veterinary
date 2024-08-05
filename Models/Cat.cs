@@ -7,9 +7,12 @@ namespace PruebaC_sharp_NicolasMartinezCardona.Models;
 
 public class Cat : Animal
 {
+    //propiedades de la clase Cat
     public bool BreedingStatus { get; set; }
 
     public string FurLength { get; set; } 
+
+    //Constructor de la clase Cat
 
     public Cat(int id, string name, DateOnly birthdate, string breed, string color, double weightInKg, bool breedingStatus, string furLength) : base( id,  name,  birthdate,  breed,  color,  weightInKg)
     {
@@ -17,6 +20,7 @@ public class Cat : Animal
         FurLength = furLength;
     }
 
+    // metods de la clase Cat
     public void CastrateAnimal()
     {
 

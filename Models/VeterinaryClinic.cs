@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 namespace PruebaC_sharp_NicolasMartinezCardona.Models;
 
 public class VeterinaryClinic
-{
+{   
+    // propiedades de la clase VeterinaryClinic
     public string Name { get; set; }
 
     public string Address { get; set; }
@@ -15,17 +16,21 @@ public class VeterinaryClinic
 
     public List<Cat> Cats { get; set; } 
 
+    // primer COnstructor de la clase VeterinaryClinic
     public VeterinaryClinic()
     {
         List<Dog> Dogs = new List<Dog>();
         List<Cat> Cats = new List<Cat>();
     }
 
+    // segundo constructor de la clase VeterinaryClinic
     public VeterinaryClinic(string name, string address)
     {
         Name = name;
         Address = address;
     }
+
+    //metodos de la clase VeterinaryClinic
 
     public void SaveDog(Dog newDog)
     {
