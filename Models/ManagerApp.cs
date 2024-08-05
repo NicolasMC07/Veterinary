@@ -7,5 +7,5 @@ namespace PruebaC_sharp_NicolasMartinezCardona.Models;
 
 public class ManagerApp
 {
-
+    
 }

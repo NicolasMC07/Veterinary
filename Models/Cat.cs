@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PruebaC_sharp_NicolasMartinezCardona.Models;
 
-    public class Cat
-    {
-        
-    }
+public class Cat
+{
+
+}
